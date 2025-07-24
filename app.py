@@ -107,6 +107,15 @@ def create_app():
                 except:
                     gr.HTML('<div style="height: 120px;"></div>')  # Placeholder if image not found
 
+            gr.HTML("""
+            <div style="text-align: center; margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                <p style="color: #6c757d; margin: 0;">
+                    This Space contains the transparency report for the <a href="https://huggingface.co/HuggingFaceTB/SmolLM3-3B">SmolLM3-3B</a> GPAI model developped by <a href="https://huggingface.co/">Hugging Face</a> following the guidelines provided by the AI Office.<br/>
+                    For more information, see the <a href="https://digital-strategy.ec.europa.eu/en/library/explanatory-notice-and-template-public-summary-training-content-general-purpose-ai-models" class="dataset-link">Explanatory Notice and Template</a>
+                </p>
+            </div>
+            """)
+        
         with gr.Column(elem_classes=["main-container"]):
             # Section 1: General Information
             gr.HTML('<div class="section-header">1. General information</div>')
@@ -305,15 +314,6 @@ def create_app():
             </div>
             """)
 
-            # Footer
-            gr.HTML("""
-            <div style="text-align: center; margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
-                <p style="color: #6c757d; margin: 0;">
-                    This transparency report follows the guidelines provided by the AI Office.<br/>
-                    For more information, see the <a href="https://digital-strategy.ec.europa.eu/en/library/explanatory-notice-and-template-public-summary-training-content-general-purpose-ai-models" class="dataset-link">Explanatory Notice and Template</a>
-                </p>
-            </div>
-            """)
 
     return app
 
