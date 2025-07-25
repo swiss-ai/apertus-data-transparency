@@ -208,7 +208,7 @@ def create_app():
                                  <div class="tldr-box" style="margin: 30px 0; padding: 20px; background: linear-gradient(90deg, #e3f2fd 0%, #f3e5f5 100%); border-radius: 10px; border-left: 5px solid #667eea; color: #2c3e50;">
                      <h3 style="color: inherit; margin-top: 0; font-size: 1.3em !important;"><strong>📋 TL;DR</strong></h3>
                      <p style="font-size: 16px !important; line-height: 1.6; margin: 10px 0; color: inherit;"><strong>SmolLM3-3B</strong> is a state-of-the-art 3-billion parameter language model by <strong>Hugging Face</strong> trained on <strong>10+ trillion tokens</strong> from publicly available datasets including web documents, scientific articles, and code.
-                     Training focused on <strong>6 EU languages</strong> plus others. The model uses <strong>only public datasets</strong> (no commercial licensing, user data, or synthetic data).
+                     Training focused on <strong>6 EU languages</strong> plus others. The model uses <strong>only public datasets</strong> (no commercial licensing, user data, or other private data).
                      Data processing was done by the original component dataset curators with <strong>varied approaches to TDM and filtering</strong> that typically include compliance with robots.txt and other opt-out mechanisms, and educational content classifiers.</p>
                  </div>
             """)
