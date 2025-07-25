@@ -35,6 +35,7 @@ def create_app():
         margin: 15px 0 10px 0;
         font-weight: bold;
         font-size: 1.1em !important;
+        color: #2c3e50;
     }
     .info-box {
         background: #ffffff;
@@ -43,10 +44,12 @@ def create_app():
         padding: 15px;
         margin: 10px 0;
         font-size: 16px !important;
+        color: #2c3e50;
     }
     .info-box p, .info-box li, .info-box ul {
         font-size: 16px !important;
         line-height: 1.6 !important;
+        color: #2c3e50;
     }
     .highlight {
         background: #fff3cd;
@@ -82,6 +85,89 @@ def create_app():
     strong {
         font-size: inherit !important;
     }
+    
+    /* Dark mode adaptations */
+    @media (prefers-color-scheme: dark) {
+        .subsection-header {
+            background: #2d3748 !important;
+            color: #e2e8f0 !important;
+        }
+        .info-box {
+            background: #2d3748 !important;
+            border: 1px solid #4a5568 !important;
+            color: #e2e8f0 !important;
+        }
+        .info-box p, .info-box li, .info-box ul {
+            color: #e2e8f0 !important;
+        }
+        .highlight {
+            background: #553c9a !important;
+            border: 1px solid #667eea !important;
+            color: #e2e8f0 !important;
+        }
+        .dataset-link {
+            color: #90cdf4 !important;
+        }
+        .checkbox-yes {
+            color: #68d391 !important;
+        }
+        .checkbox-no {
+            color: #fc8181 !important;
+        }
+        .tldr-box {
+            background: linear-gradient(90deg, #2a365f 0%, #553c9a 100%) !important;
+            color: #e2e8f0 !important;
+        }
+        .version-box {
+            background: linear-gradient(90deg, #2a365f 0%, #553c9a 100%) !important;
+            color: #e2e8f0 !important;
+        }
+    }
+    
+    /* Gradio dark mode detection - alternative approach */
+    .dark .subsection-header,
+    [data-theme="dark"] .subsection-header {
+        background: #2d3748 !important;
+        color: #e2e8f0 !important;
+    }
+    .dark .info-box,
+    [data-theme="dark"] .info-box {
+        background: #2d3748 !important;
+        border: 1px solid #4a5568 !important;
+        color: #e2e8f0 !important;
+    }
+    .dark .info-box p, .dark .info-box li, .dark .info-box ul,
+    [data-theme="dark"] .info-box p, [data-theme="dark"] .info-box li, [data-theme="dark"] .info-box ul {
+        color: #e2e8f0 !important;
+    }
+    .dark .highlight,
+    [data-theme="dark"] .highlight {
+        background: #553c9a !important;
+        border: 1px solid #667eea !important;
+        color: #e2e8f0 !important;
+    }
+    .dark .dataset-link,
+    [data-theme="dark"] .dataset-link {
+        color: #90cdf4 !important;
+    }
+    .dark .checkbox-yes,
+    [data-theme="dark"] .checkbox-yes {
+        color: #68d391 !important;
+    }
+    .dark .checkbox-no,
+    [data-theme="dark"] .checkbox-no {
+        color: #fc8181 !important;
+    }
+    .dark .tldr-box,
+    [data-theme="dark"] .tldr-box {
+        background: linear-gradient(90deg, #2a365f 0%, #553c9a 100%) !important;
+        color: #e2e8f0 !important;
+    }
+    .dark .version-box,
+    [data-theme="dark"] .version-box {
+        background: linear-gradient(90deg, #2a365f 0%, #553c9a 100%) !important;
+        color: #e2e8f0 !important;
+    }
     """
 
     with gr.Blocks(css=custom_css, title="SmolLM3-3B EU Data Transparency") as app:
@@ -95,13 +181,16 @@ def create_app():
                     except:
                         gr.HTML('<div style="height: 120px;"></div>')  # Placeholder if image not found
                 
-                with gr.Column(scale=1):
-                    gr.HTML("""
-                    <div style="text-align: center; padding: 20px;">
-                        <h1 style="color: #2c3e50; margin: 0; font-size: 3em !important;">SmolLM3-3B</h1>
-                        <h2 style="color: #667eea; margin: 10px 0 0 0; font-size: 1.5em !important;">Public Summary of Training Content</h2>
-                    </div>
-                    """)
+                with gr.Column(scale=1.5):
+                     gr.HTML("""
+                     <div style="text-align: center; padding: 20px;">
+                         <h1 style="color: #2c3e50; margin: 0; font-size: 2.25em !important;">SmolLM3-3B</h1>
+                         <h2 style="color: #667eea; margin: 10px 0 0 0; font-size: 1.5em !important;">Public Summary of Training Content</h2>
+                         <div class="version-box" style="margin-top: 15px; padding: 8px 16px; background: linear-gradient(90deg, #e3f2fd 0%, #f3e5f5 100%); border-radius: 20px; display: inline-block; font-size: 14px; color: #2c3e50; border-left: 3px solid #667eea;">
+                             <a href="https://huggingface.co/spaces/hfmlsoc/smollm3-eu-data-transparency/commits/main" class="dataset-link" style="font-weight: bold; color: inherit;">Summary v1.0</a> - Last updated: 25/07/2025
+                         </div>
+                     </div>
+                     """)
                 
                 with gr.Column(scale=1):
                     try:
@@ -112,16 +201,16 @@ def create_app():
             gr.HTML("""
                 <div style="text-align: center; margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
                     <p style="color: #6c757d; margin: 0;">
-                        This Space contains the transparency report for the <a href="https://huggingface.co/HuggingFaceTB/SmolLM3-3B">SmolLM3-3B</a> GPAI model developped by <a href="https://huggingface.co/">Hugging Face</a> following the guidelines provided by the AI Office.<br/>
-                        For more information, see the <a href="https://digital-strategy.ec.europa.eu/en/library/explanatory-notice-and-template-public-summary-training-content-general-purpose-ai-models" class="dataset-link">Explanatory Notice and Template</a>
+                        This Space contains the transparency report for the <a href="https://huggingface.co/HuggingFaceTB/SmolLM3-3B">SmolLM3-3B</a> GPAI model developed by <a href="https://huggingface.co/">Hugging Face</a> following the guidelines provided by the AI Office.<br/>
+                        It may serve as an example for <strong>open-source GPAI trained exclusively on public datasets</strong>. For more information, see the <a href="https://digital-strategy.ec.europa.eu/en/library/explanatory-notice-and-template-public-summary-training-content-general-purpose-ai-models" class="dataset-link">Explanatory Notice and Template</a>
                     </p>
                 </div>
-                <div style="margin: 30px 0; padding: 20px; background: linear-gradient(90deg, #e3f2fd 0%, #f3e5f5 100%); border-radius: 10px; border-left: 5px solid #667eea;">
-                    <h3 style="color: #2c3e50; margin-top: 0; font-size: 1.3em !important;"><strong>📋 TL;DR</strong></h3>
-                    <p style="font-size: 16px !important; line-height: 1.6; margin: 10px 0;"><strong>SmolLM3-3B</strong> is a state-of-the-art 3-billion parameter language model by <strong>Hugging Face</strong> trained on <strong>10+ trillion tokens</strong> from publicly available datasets including web documents, scientific articles, and code.
-                    Training focused on <strong>6 EU languages</strong> plus others. The model uses <strong>only public datasets</strong> (no commercial licensing, user data, or synthetic data).
-                    Data processing was done by the original component dataset curators with <strong>varied approaches to TDM and filtering</strong> that typically include compliance with robots.txt and other opt-out mechanisms, and educational content classifiers.</p>
-                </div>
+                                 <div class="tldr-box" style="margin: 30px 0; padding: 20px; background: linear-gradient(90deg, #e3f2fd 0%, #f3e5f5 100%); border-radius: 10px; border-left: 5px solid #667eea; color: #2c3e50;">
+                     <h3 style="color: inherit; margin-top: 0; font-size: 1.3em !important;"><strong>📋 TL;DR</strong></h3>
+                     <p style="font-size: 16px !important; line-height: 1.6; margin: 10px 0; color: inherit;"><strong>SmolLM3-3B</strong> is a state-of-the-art 3-billion parameter language model by <strong>Hugging Face</strong> trained on <strong>10+ trillion tokens</strong> from publicly available datasets including web documents, scientific articles, and code.
+                     Training focused on <strong>6 EU languages</strong> plus others. The model uses <strong>only public datasets</strong> (no commercial licensing, user data, or synthetic data).
+                     Data processing was done by the original component dataset curators with <strong>varied approaches to TDM and filtering</strong> that typically include compliance with robots.txt and other opt-out mechanisms, and educational content classifiers.</p>
+                 </div>
             """)
 
             # Section 1: General Information
@@ -140,8 +229,12 @@ def create_app():
                             <ul>
                                 <li><strong>Provider name and contact details:</strong>
                                     <ul>
-                                        <li><strong>Hugging Face</strong></li>
-                                        <li><strong>Website: <a href="https://huggingface.co" class="dataset-link">https://huggingface.co</a></strong></li>
+                                        <li>Hugging Face Inc., <a href="mailto:legal@huggingface.co" class="dataset-link">legal@huggingface.co</a></li>
+                                    </ul>
+                                </li>
+                                <li><strong>Authorised representative name and contact details:</strong>
+                                    <ul>
+                                        <li>Hugging Face SAS, <a href="mailto:legal@huggingface.co" class="dataset-link">legal@huggingface.co</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -169,7 +262,8 @@ def create_app():
                     <ul>
                         <li><strong>TEXT</strong>
                             <ul>
-                                <li><strong>Size:</strong> <strong>more than 10 trillion tokens</strong></li>
+                                <li><strong>Size:</strong> <strong>[more than 10 trillion tokens]</strong></li>
+                                  <ul><li>The training corpus is made up of 11 trillion tokens as tokenized by the <a href="https://huggingface.co/meta-llama/Llama-3.2-1B" class="dataset-link">Llama-3.2-1B</a> tokenizer.</li></ul>
                                 <li>The training corpus for SmolLM3 is made up of several publicly accessible large datasets containing web documents, scientific articles, software code, and synthetically generated textbooks and mathematical data for pre-training in addition to several mid-training and fine-tuning datasets to enable chat interactions, instruction-following and task-solving behaviors.</li>
                             </ul>
                         </li>
@@ -180,12 +274,12 @@ def create_app():
                         </li>
                         <li><strong>Description of the linguistic characteristics of the overall training data:</strong>
                             <ul>
-                                <li>The overall training process focuses on 6 languages that are all Union languages: English, French, Spanish, German, Italian, and Portuguese. In addition, pre-training intentionally included smaller quantities of data in Mandarin Chinese, Russian, Persian, Japanese, Korean, Vietnamese, Hindi, Thai, and Greek. Other languages may have been included due to the limitations of automatic language identification in filtering stages.</li>
+                                <li>The overall training process focuses on 6 languages that are all official EU languages: English, French, Spanish, German, Italian, and Portuguese. In addition, pre-training intentionally included smaller quantities of data in Mandarin Chinese, Russian, Persian, Japanese, Korean, Vietnamese, Hindi, Thai, and Greek (also an official EU language). Other languages may have been included due to the limitations of automatic language identification in filtering stages.</li>
                             </ul>
                         </li>
                         <li><strong>Other relevant characteristics of the overall training data:</strong>
                             <ul>
-                                <li>The training data also includes software code in the programming languages included in the Stack v2 dataset (16 languages including C, Python, Java, Markdown, HTML, Shell, etc.).</li>
+                                <li>The training data also includes software code in the programming languages included in the Stack v2 dataset (16 languages including C, C++, C-Sharp, Python, Java, JavaScript, Markdown, HTML, Shell, PHP, TypeScript, Swift, SQL, Ruby, Go, and Rust).</li>
                             </ul>
                         </li>
                     </ul>
@@ -196,7 +290,7 @@ def create_app():
             gr.HTML('<div class="section-header">2. List of data sources</div>')
             gr.HTML("""
             <div style="padding: 15px; margin: 10px 0; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #667eea;">
-                <p style="margin: 0; font-size: 16px !important; color: #2c3e50;"><strong>TL;DR:</strong> ✅ Publicly available datasets (DCLM, FineWeb, Stack v2, etc.) | ❌ No commercial licensing, crawling, user data, or private synthetic data</p>
+                <p style="margin: 0; font-size: 16px !important; color: #2c3e50;"><strong>TL;DR:</strong> ✅ Publicly available datasets including synthetic data | ❌ No commercial licensing, crawling, user data, or private data</p>
             </div>
             """)
             with gr.Accordion("👇 Click for full information", open=False):
@@ -217,6 +311,8 @@ def create_app():
                                 <li>FineWeb2: <a href="https://huggingface.co/datasets/epfml/FineWeb2-HQ" class="dataset-link">https://hf.co/datasets/epfml/FineWeb2-HQ</a></li>
                                 <li>Stack V2: <a href="https://hf.co/datasets/bigcode/the-stack-v2" class="dataset-link">https://hf.co/datasets/bigcode/the-stack-v2</a></li>
                                 <li>pes2o: <a href="https://hf.co/datasets/allenai/peS2o" class="dataset-link">https://hf.co/datasets/allenai/peS2o</a></li>
+                                <li>FineMath : <a href="https://hf.co/datasets/HuggingFaceTB/finemath" class="dataset-link">https://hf.co/datasets/HuggingFaceTB/finemath</a></li>
+                                <li>MegaMath: <a href="https://hf.co/datasets/LLM360/MegaMath" class="dataset-link">https://hf.co/datasets/LLM360/MegaMath</a></li>
                                 <li>SmolTalk2: <a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk2" class="dataset-link">https://hf.co/datasets/HuggingFaceTB/smoltalk2</a></li>
                             </ul>
                         </li>
@@ -284,8 +380,17 @@ def create_app():
                             <div class="subsection-header">2.5. Synthetic data</div>
                             <ul>
                                 <li><strong>Was synthetic AI-generated data created by the provider or on their behalf to train the model?</strong>
-                                    <ul><li><strong><span class="checkbox-no">☐ No</span></strong></li></ul>
-                                </li>
+                            <ul><li><strong><span class="checkbox-yes">☑ Yes</span></strong></li></ul>
+                            </li>
+                            <li><strong>If yes, modality of the synthetic data:</strong>
+                                <ul><li><strong><span class="checkbox-yes">☑ Text</span></strong></li></ul>
+                            </li>
+                            <li><strong>Information about other AI models, including provider’s own AI model(s) not available on the market, used to generate synthetic data to train the model to which this Summary applies:</strong>
+                                <ul><li>Additional data was generated using the <a href="https://huggingface.co/Qwen/Qwen3-32B" class="dataset-link">Qwen3-32B</a> and <a href="https://huggingface.co/Qwen/Qwen3-Embedding-0.6B" class="dataset-link">Qwen3-0.6B</a> open-weight models.</li></ul>
+                            </li>
+                            <li><strong>Additional comments (optional):</strong>
+                                <ul><li>Some parts of the <a href="https://hf.co/datasets/HuggingFaceTB/smoltalk2" class="dataset-link">SmolTalk2</a> dataset mentioned in Section 2.1 were synthetically generated for the purpose of training this model. See <a href="https://huggingface.co/datasets/HuggingFaceTB/smoltalk2#license" class="dataset-link">License information in the dataset description</a>.</li></ul>
+                            </li>
                             </ul>
                         </div>
                         """)
@@ -329,7 +434,12 @@ def create_app():
                     <ul>
                         <li><strong>General description of measures taken:</strong>
                             <ul>
-                                <li>Each of the component datasets leveraged is the product of a distinct curation effort by its custodians to select the most desirable content. The specific approaches can typically be found in the dataset documentation. Among other factors, most of the datasets take the approach of using classifiers to identify "highly educational" samples that lowers the likelihood of illegal content.</li>
+                                <li>
+                        Each of the component datasets leveraged is the product of a distinct curation effort by its custodians to select the most desirable content.
+                        The specific approaches can typically be found in the dataset documentation.
+                        Among other factors, most of the datasets take the approach of using classifiers to identify "highly educational" samples that lowers the likelihood of illegal content.
+                        Datasets like The Stack v2 for example additionally filtered out software code with copyleft licenses and applied automatic redaction of categories of personal data.
+                               </li>
                             </ul>
                         </li>
                     </ul>
