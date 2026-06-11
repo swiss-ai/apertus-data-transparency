@@ -1,14 +1,13 @@
----
-title: Smollm3 Eu Data Transparency
-emoji: 🏢
-colorFrom: gray
-colorTo: red
-sdk: gradio
-sdk_version: 5.38.1
-app_file: app.py
-pinned: false
-license: cc-by-4.0
-short_description: The EU AI Act Public Summary of Training Content for SmolLM3
+Apertus Data Transparency
 ---
 
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+This is a repository containing versioned snapshots of key documentation from the Apertus releases. 
+
+Use Git tags to conveniently browse and compare the `reports`.
+
+The `code` folder contains an example Gradio app from another project, currently this is not used.
+
+See also (we may merge these):
+
+- https://github.com/swiss-ai/apertus-data
+- https://github.com/swiss-ai/apertus-data-catalogue-preview
