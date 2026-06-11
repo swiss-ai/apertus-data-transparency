@@ -3,11 +3,10 @@ Apertus Data Transparency
 
 This is a repository containing versioned snapshots of key documentation from the Apertus releases. 
 
-Use Git tags to conveniently browse and compare the `reports`.
+Use Git tags to conveniently browse and compare the `reports`:
 
-The `code` folder contains an example Gradio app from another project, currently this is not used.
+- [v1.5](/tree/v1.5) - Apertus 1.5 (2607)
+- [v1.1](/tree/v1.1) - Apertus 1.1 (2606)
+- [v1.0](/tree/v1.0) - Apertus 1.0 (2509)
 
-See also (we may merge these):
-
-- https://github.com/swiss-ai/apertus-data
-- https://github.com/swiss-ai/apertus-data-catalogue-preview
+The [v0.0](/tree/v0.0) tag contains an early version of this repository, in the form of an app by [@yjernite](https://huggingface.co/yjernite)
