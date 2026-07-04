@@ -191,10 +191,7 @@ For removal requests of personally identifiable information (PII) or of copyrigh
 - llm-privacy-requests@swiss-ai.org
 - llm-copyright-requests@swiss-ai.org
   
-#### Output Filter for PII
-
-- Currently no output filter is provided.
-- Please check this site regularly for an output filter that can be used on top of the Apertus LLM. The filter reflects data protection deletion requests which have been addressed to us as the developer of the Apertus LLM. It allows you to remove Personal Data contained in the model output. We strongly advise downloading and applying this output filter from this site every six months.
+Currently no output filter is provided. We endeavour to address data protection deletion requests by updating filters in our data pipeline, and providing regular (at least bi-annual) releases to the model weights. We strongly advise downloading and updating new model weights from this site every six months.
 
 ## Contact
 
