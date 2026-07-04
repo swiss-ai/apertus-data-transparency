@@ -118,39 +118,46 @@ print(tokenizer.decode(output_ids, skip_special_tokens=True))
 
 ### Long context processing
 
-Apertus by default supports a context length up to 262'144 tokens. 
+Apertus 1.5 by default supports a context length up to 262'144 tokens, a four-fold increase from our initial release.
+
+(#TODO mention something about performance tradeoffs)
 
 ### Agentic Usage
 
-Apertus supports tool use with newer versions of the chat template, such as the version shipped with [vLLM 0.22.0](https://github.com/vllm-project/vllm/releases/tag/v0.22.0) and above.
+Apertus supports tool use with newer versions of the internal parser, such as the version shipped with [vLLM 0.22.0](https://github.com/vllm-project/vllm/releases/tag/v0.22.0) and above. 
+
+(#TODO recommendations on tool use and harnesses)
 
 ## Deployment
 
-Deployment of the models is directly supported by the newest versions of [Transformers](https://github.com/huggingface/transformers), [vLLM](https://github.com/vllm-project/vllm), [SGLang](https://github.com/sgl-project/sglang), and also for running on-device with [MLX](https://github.com/ml-explore/mlx-lm) or [GGUF](https://github.com/ggml-org/ggml/blob/master/docs/gguf.md) as loading formats. 
+Deployment of the models is directly supported in a variety of open source frameworks, such as [Transformers](https://github.com/huggingface/transformers), [vLLM](https://github.com/vllm-project/vllm), [SGLang](https://github.com/sgl-project/sglang), and also for running on-device with [MLX](https://github.com/ml-explore/mlx-lm) or [GGUF](https://github.com/ggml-org/ggml/blob/master/docs/gguf.md) as loading formats. 
 
-For example, you can also load the model with the latest `vLLM` which uses Transformers as a backend. 
-The Apertus template was merged in `v0.22.0`, and we recommend the latest release - `v0.23.0` or above. 
-A Docker image for vllm [is available](https://github.com/swiss-ai/model-launch/pkgs/container/vllm_apertus_1.5), as well as deployment instructions on [our documentation site](https://apertus-ai.org/docs/guides/vllm/).
+For instance, the Apertus tool parser is available in current releases of vLLM, and we have tested `v0.24.0` at the time of release. 
+A Docker image for vllm [is available](https://github.com/swiss-ai/model-launch/pkgs/container/vllm_apertus_1.5), as well as deployment instructions for this and other software on [our documentation site](https://apertus-ai.org/docs/guides/).
 
-There is a diverse community creating quantized and reformatted versions of the Apertus models. We will endeavor to support the main formats with an official build on our Hugging Face organization. A few outstanding community versions are linked from our documentation. Use 3rd party builds at your own risk, and contact us for a quick validation before going to production. 
+There is a diverse community creating quantized and reformatted versions of the Apertus models. We will endeavor to support the main formats with an official build on the [@swiss-ai](https://huggingface.co/swiss-ai) Hugging Face organization. Verified community versions are linked from our documentation. 
+
+Please use 3rd party builds at your own risk, and contact us for a quick validation before going to production. 
 
 ## Evaluation
 
 Benchmark evaluations, for pretraining and posttraining phases, multilingual evaluations in around hundred languages, and long context evaluations are provided in Section 5 of the [Apertus Tech Report](https://arxiv.org/abs/2509.14233)
+
+(#TODO update with link to benchmarks page)
 
 ## Training
 
 ### Model
 
 - **Architecture:** Transformer decoder
-- **Pretraining tokens:** 15T
+- **Pretraining tokens:** 17T
 - **Precision:** bfloat16
 
 ### Software & hardware
 
 - **GPUs:** 4096 GH200
 - **Training Framework:** [Megatron-LM](https://github.com/swiss-ai/Megatron-LM)
-- ...
+- ... (#TODO what else?)
 
 ### Open resources
 
@@ -158,11 +165,13 @@ All elements used in the training process are made openly available
 - **Training data reconstruction scripts:** [github.com/swiss-ai/pretrain-data](https://github.com/swiss-ai/pretrain-data)
 - The training intermediate checkpoints are available on the different branches of this same repository
 
+(#TODO posttraining data etc.)
 
 ## Limitations
 
 Apertus can produce text on a variety of topics, but the generated content may not always be factually accurate, logically consistent, or free from biases present in the training data. These models should be used as assistive tools rather than definitive sources of information. Users should always verify important information and critically evaluate any generated content.
 
+(#TODO link to Swiss AI Charter?)
 
 ## Legal Aspects
 
@@ -173,9 +182,12 @@ These are being updated for Apertus 1.5. For documentation of the initial releas
 - [Apertus_EU_Public_Summary.pdf](https://huggingface.co/swiss-ai/Apertus-70B-2509/blob/main/Apertus_EU_Public_Summary.pdf)
 - [Apertus_EU_Code_of_Practice.pdf](https://huggingface.co/swiss-ai/Apertus-70B-2509/blob/main/Apertus_EU_Code_of_Practice.pdf)
 
+(#TODO update these links)
+
 #### Data Protection and Copyright Requests
 
-For removal requests of personally identifiable information (PII) or of copyrighted content, please contact the respective dataset owners or us directly
+For removal requests of personally identifiable information (PII) or of copyrighted content, please contact the respective dataset owners or us directly:
+
 - llm-privacy-requests@swiss-ai.org
 - llm-copyright-requests@swiss-ai.org
   
@@ -186,7 +198,7 @@ For removal requests of personally identifiable information (PII) or of copyrigh
 
 ## Contact
 
-To contact us, please use the links at https://apertvs.ai/contact/ or send an email to
+To contact us, please use the links at https://apertus-ai.org/contact/ - or send an email to
 llm-requests@swiss-ai.org
 
 ## Citation
