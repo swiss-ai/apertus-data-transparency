@@ -6,18 +6,10 @@ pipeline_tag: text-generation
 library_name: transformers
 tags:
   - multilingual
+  - switzerland
   - compliant
   - swiss-ai
   - apertus
-
-extra_gated_prompt: 
-extra_gated_fields:
-  Your Name: text
-  Country: country
-  Affiliation: text
-  geo: ip_location
-  By clicking Submit below I accept the terms of use: checkbox
-extra_gated_button_content: Submit
 ---
 
 # Apertus 1.5
