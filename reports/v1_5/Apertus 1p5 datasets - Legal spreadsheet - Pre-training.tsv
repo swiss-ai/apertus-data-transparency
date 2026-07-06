@@ -1,0 +1,146 @@
+Dataset Name	License	Already in v1	Url	Modality	Version	PII removal	Robots filtering
+nvidia/Granary	CC BY 3.0	No	https://huggingface.co/datasets/nvidia/Granary	audio	ed9782b0a927000dfd4d3b3a7e3d3e08a83360d5	No	No
+MLCommons/unsupervised_peoples_speech	CC-BY-SA， CC-BY	No	https://huggingface.co/datasets/MLCommons/unsupervised_peoples_speech	audio	d917e17e86f6abc4fa4d83e958c8f4173f45f0e7	No	No
+facebookresearch/voxpopuli	CC-BY-1.0	No	https://github.com/facebookresearch/voxpopuli	audio	f7a3bb98d664e1d031763ec4f7639c4a530c64e9	No	No
+k2-fsa/libriheavy	Apache-2.0	No	https://github.com/k2-fsa/libriheavy	audio	dd76fe9f00fd4eba0f0a24b002f6c9d9981db9f7	No	No
+speechcolab/gigaspeech	Apache-2.0	No	https://huggingface.co/datasets/speechcolab/gigaspeech	audio	63c0836b643dc6136a608de041e56b67c12649b3	No	No
+speechcolab/gigaspeech2	Apache 2.0	No	https://huggingface.co/datasets/speechcolab/gigaspeech2	audio	aeedc8cde7fd37c4164ab1d1b5551dd12ee931fe	No	No
+MLCommons/peoples_speech	CC-BY-SA， CC-BY	No	https://huggingface.co/datasets/MLCommons/peoples_speech	audio	f10597c5d3d3a63f8b6827701297c3afdf178272	No	No
+laubonghaudoi/legco-speech	CC-BY-1.0	No	https://huggingface.co/datasets/laubonghaudoi/legco-speech	audio	d7b41c4be0bea9d58b9fc98e7ad3e14dce3771eb	No	No
+wenet/WenetSpeech	Apache-2	No	https://modelscope.cn/datasets/wenet/WenetSpeech	audio	Not versioned — Fix release	No	No
+agkphysics/AudioSet	CC BY 4.0	No	https://huggingface.co/datasets/agkphysics/AudioSet	audio	0c609e8302cf139307f639c57652032af0a88041	No	No
+openslr/Audiocite.net	Mixed	No	https://www.openslr.org/139	audio	Not versioned — Fix release	No	No
+rkstgr/mtg-jamendo	Apache-2.0	No	https://huggingface.co/datasets/rkstgr/mtg-jamendo	audio	8265518f6b5127d386a85ab5c380d867ff9ae70b	No	No
+facebook/omnilingual-asr-corpus	CC BY 4.0	No	https://huggingface.co/datasets/facebook/omnilingual-asr-corpus	audio	8648ba8946377697b427ae952076e49fc0e5e44d	No	No
+CoRal-project/coral-v3	Openrail	No	https://huggingface.co/datasets/CoRal-project/coral-v3	audio	01f7c93c21fc9dec87fe9f7149c79569cc433f08	No	No
+i4ds/spc_r	CC BY 4.0	No	https://huggingface.co/datasets/i4ds/spc_r	audio	86a54db1b27c10154cc371576fcc97017f434f79	No	No
+aishelltech/AISHELL-1	Apache-2.0	No	https://www.aishelltech.com/kysjcp	audio	v1	No	No
+leduckhai/MultiMed	MIT	No	https://huggingface.co/datasets/leduckhai/MultiMed	audio	459d0ab6db332904f9d7b76a8baabf3333958fa8	No	No
+aishelltech/AISHELL-4	Apache-2.0	No	https://www.aishelltech.com/aishell_4	audio	v4	No	No
+tensorxt/ViMedCSS	CC-BY-4.0	No	https://huggingface.co/datasets/tensorxt/ViMedCSS	audio	b6959a18a08739464733930a872e7125c03e6558	No	No
+openslr/RussianLibriSpeech	Public Domain	No	https://www.openslr.org/96	audio	Not versioned — Fix release	No	No
+aishelltech/AISHELL-3	Apache-2.0	No	https://www.aishelltech.com/aishell_3	audio	v3	No	No
+Bingsu/zeroth-korean	CC-BY-4.0	No	https://huggingface.co/datasets/Bingsu/zeroth-korean	audio	bd173fe2c8ed0dccd47acb4eda77542593651622	No	No
+openslr/ThorstenMüllerGermanNeutral-TTS	CC0	No	https://www.openslr.org/95	audio	Not versioned — Fix release	No	No
+disco-eth/EuroSpeech	dep. on country	No	https://huggingface.co/datasets/disco-eth/EuroSpeech	audio	d244daad20b9189245f361c057df5b130d75c113	No	No
+fhnw/GemeinderatZürichAudio	MIT	No	https://www.cs.technik.fhnw.ch/i4ds-datasets	audio	Version 1, 2021-03-10	No	No
+sarulab-speech/mls_sidon	CC-BY-4.0	No	https://huggingface.co/datasets/sarulab-speech/mls_sidon	audio	a9abb3a85d5ca67f92ed29f65003b420169e2732	No	No
+nyuuzyou/suno	CC-BY-1.0	No	https://huggingface.co/datasets/nyuuzyou/suno	audio	dd95495c415eea043c250f12da595de2ad4cad7f	No	No
+mozilla/CommonVoice24	CC-BY-1.0	No	https://commonvoice.mozilla.org/fr	audio	Not versioned	No	No
+MRSAudio/MRSAudio	CC-BY-4.0	No	https://huggingface.co/datasets/MRSAudio/MRSAudio	audio	b1349c4fc03c11b958c2d0e5deb62ae208c1a43c	No	No
+classla/ParlaSpeech-RS	CC-BY-4.0	No	https://huggingface.co/datasets/classla/ParlaSpeech-RS	audio	a806c1fb6e2bfb99c75f4a811b8efe537e70d631	No	No
+NhutP/VietSpeech	Apache 2.0	No	https://huggingface.co/datasets/NhutP/VietSpeech	audio	0f18688afa9b64ea515d3fdaad850999b86a0f52	No	No
+ai4bharat/SeamlessAlign	CC-BY-4.0	No	https://huggingface.co/datasets/ai4bharat/SeamlessAlign	audio	8c812b0c895ffc3e1d8f63f3c0122d9cf332a286	No	No
+MikCil/f1-team-radio	CC-BY-4.0	No	https://huggingface.co/datasets/MikCil/f1-team-radio	audio	a0b99e1a325d92d63b574541a24902a660a352ea	No	No
+ai4bharat/Kathbath	CC-BY-4.0	No	https://huggingface.co/datasets/ai4bharat/Kathbath	audio	5b9e92849222026d9141acba4e8434fe816396bf	No	No
+Flamme-VRM/kazakh-speech-dataset	CC-BY-4.0	No	https://huggingface.co/datasets/Flamme-VRM/kazakh-speech-dataset	audio	343bb8647d6dadef5c7db0710fd0d34340cfc488	No	No
+CanCLID/zoengjyutgaai	CC-BY-1.0	No	https://huggingface.co/datasets/CanCLID/zoengjyutgaai	audio	829b30725811cabe9b8e2fd0513966470b304f12	No	No
+NaiveNeuron/SloPalSpeech	CC-BY-4.0	No	https://huggingface.co/datasets/NaiveNeuron/SloPalSpeech	audio	c8a0ee1733fc1f28dee7fb80fec24a2153280569	No	No
+Vikhrmodels/ToneWebinars	Apache 2.0	No	https://huggingface.co/datasets/Vikhrmodels/ToneWebinars	audio	a9bda19fb4bf501a744dc0a9c1c7d239b4c43ea4	No	No
+uhhlt/Tuda-De	CC-BY-4.0	No	https://huggingface.co/datasets/uhhlt/Tuda-De	audio	26ad28a9ac73b664c2f7c7c93969f9507ea6aadc	No	No
+mediaspeech	CC-BY-4.0	No	https://openslr.trmal.net/resources/108	audio	Not versioned — Fix release	No	No
+farsi-asr/farsi-asr-dataset	MIT	No	https://huggingface.co/datasets/farsi-asr/farsi-asr-dataset	audio	59f14ee2ffce2f9e454d80f2b6d29016dd513492	No	No
+ndl/aozora_hurigana_speech_v2	PDM	No	https://lab.ndl.go.jp/dataset/hurigana-speech-corpus-aozora/ver2/aozora_work_part1.zip	audio	Not versioned — Fix release	No	No
+ghananlpcommunity/ghana-english-speech-600hrs	CC-BY-4.0	No	https://huggingface.co/datasets/ghananlpcommunity/ghana-english-speech-600hrs	audio	9c0b9da2d02cfea61c082582f2c628e39aebeeca	No	No
+shuyuej/CC-Podcasts	Apache-2.0	No	https://huggingface.co/datasets/shuyuej/CC-Podcasts	audio	044c5e8b545e306cec2d9bc6e4a3db5ded17625b	No	No
+localized_narratives	CC-BY-4.0	No	https://storage.googleapis.com/localized-narratives	audio	Not versioned	No	No
+joelniklaus/Multi_Legal_Pile	CC-BY-NC-SA-4.0	No	https://huggingface.co/datasets/joelniklaus/Multi_Legal_Pile	text	911e1d214162fd11d2c78d3f1428cbfcbe07782c	Yes	Yes
+joelniklaus/legal-mc4	CC-BY-4.0	No	https://huggingface.co/datasets/joelniklaus/legal-mc4	text	0b22f730140a3494f7c714ca6035aa54e9d3d1b1	Yes	Yes
+HuggingFaceTB/dclm-edu	CC-BY-4.0	Yes	https://huggingface.co/datasets/HuggingFaceTB/dclm-edu	text	dbad8ad71224482740cd9c9d353591adbf62fe04	Yes	Yes
+nvidia/Nemotron-CC-v2.1	Other	No	https://huggingface.co/datasets/nvidia/Nemotron-CC-v2.1	text	ba6f2aaef7ada865bb08fc08640ca292150097db	Yes	No
+HuggingFaceFW/finepdfs-edu	odc-by	No	https://huggingface.co/datasets/HuggingFaceFW/finepdfs-edu	text	9cfabe2127faca99b3d5c4dc6d1fcb397399ebde	Yes	Yes
+PleIAs/SYNTH	CC-BY-4.0	No	https://huggingface.co/datasets/PleIAs/SYNTH	text	6ebe6a97043747aa5f2232ea1182841c4a6afcb0	Yes	No
+HuggingFaceFW/fineweb-2	odc-by	Yes	https://huggingface.co/datasets/HuggingFaceFW/fineweb-2	text	4c6643774aad7f5970955b43fa357008a92471d8	Yes	Yes
+HuggingFaceFW/finetranslations	odc-by	No	https://huggingface.co/datasets/HuggingFaceFW/finetranslations	text	af3f4ca895450216d4771cdbf3e3b95c5bacaa2a	Yes	Yes
+HuggingFaceTB/finemath	odc-by	Yes	https://huggingface.co/datasets/HuggingFaceTB/finemath	text	8f233cf84cff0b817b3ffb26d5be7370990dd557	Yes	Yes
+Infi-MM/InfiMM-WebMath-40B	odc-by	Yes	https://huggingface.co/datasets/Infi-MM/InfiMM-WebMath-40B	text	8f233cf84cff0b817b3ffb26d5be7370990dd557	Yes	Yes
+LLM360/MegaMath	odc-by	Yes	https://huggingface.co/datasets/LLM360/MegaMath	text	3cbc64616594d6bc8759abaa0b2a71858f880f0d	Yes	Yes
+OpenCoder-LLM/opc-annealing-corpus	odc-by	No	https://huggingface.co/datasets/OpenCoder-LLM/opc-annealing-corpus	text	078e4bc1d39725cccc18514d2e3278a3fe191110	Yes	Yes
+HuggingFaceTB/stack-edu	other	Yes	https://huggingface.co/datasets/HuggingFaceTB/stack-edu	text	eeec5caac5cc3758a18f1d3ba4416837a9ba814c	Yes	Yes
+nvidia/Nemotron-Pretraining-Code-v1	other	No	https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Code-v1	text	01393d3bd890ddc5c15da8a2c9afb57391277659	Yes	Yes
+voilaj/swiss-caselaw	CC0-1.0	No	https://huggingface.co/datasets/voilaj/swiss-caselaw	text	0e81bbe643227a4e8b0c524acc4d8884bdf04a05	Yes	Yes
+joelniklaus/legal-mc4	CC-BY-4.0	No	https://huggingface.co/datasets/joelniklaus/legal-mc4	text	0b22f730140a3494f7c714ca6035aa54e9d3d1b1	Yes	Yes
+institutional/institutional-books-1.0	other	Yes	https://huggingface.co/datasets/institutional/institutional-books-1.0	text	d2f504a112fa057ddd2bc536188535a674a90270	Yes	Yes
+Biomed-Enriched_preprocessed	CC-BY-4.0	No	https://huggingface.co/datasets/almanach/Biomed-Enriched	text	9b1768cc85017715dc8e215d1918de129648277d	No	No
+dolma3_olmocr_science_pdfs-preprocessed	ODC-BY	No	https://huggingface.co/datasets/allenai/dolma3_longmino_mix-100B-1125	text	e8ddbf434028358ba58adee6981c31775db930c2	No	No
+GLAMI-1M	apache 2.0	No	https://zenodo.org/records/7338792	image	Not versioned — Fix release	No	No
+hf___ai4ce___EgoPAT3Dv2	Unknown	No	https://huggingface.co/datasets/ai4ce/EgoPAT3Dv2	image	9f20d0b0f6f48022bc2e10c46f219e3b89c44681	No	No
+imageomics/TreeOfLife-10M	Mixed, CC-BY-SA, CC-BY-NC-SA, CC0	No	https://huggingface.co/datasets/imageomics/TreeOfLife-10M	image	91debffb7146c32c89d76feb1eb575b555e2ecc7	No	No
+dclure/laion-aesthetics-12m-umap	MIT	No	https://huggingface.co/datasets/dclure/laion-aesthetics-12m-umap	image	06928317703bcfa6099c7fc0f13e11bb295e7769	No	No
+ServiceNow/BigDocs-7.5M	CC-BY-4.0	No	https://huggingface.co/datasets/ServiceNow/BigDocs-7.5M	image	dae4403c28307bd5328920740e81ce5232819e74	No	No
+swisstopo/SWISSIMAGE_10cm	OGD	No	https://www.swisstopo.admin.ch/en/orthoimage-swissimage-10#Download	image	Not versioned — Fix release	No	No
+mlfoundations/MINT-1T	CC-BY-4.0	No	https://github.com/mlfoundations/MINT-1T	image	2d9ed806777c02b5f6aaa25ec86250df3efe5ef5	Yes	Yes
+mlfoundations/MINT-1T-HTML	CC-BY-4.0	No	https://huggingface.co/datasets/mlfoundations/MINT-1T-HTML/tree/906a8b85cea61198ff7339c4dd711ad0b5361847	image	906a8b85cea61198ff7339c4dd711ad0b5361847	Yes	Yes
+mlfoundations/MINT-1T-ArXiv	CC-BY-4.0	No	https://huggingface.co/datasets/mlfoundations/MINT-1T-ArXiv/tree/7c5b00ffd5b563071010c3bf2082b4a8f836eb72	image	7c5b00ffd5b563071010c3bf2082b4a8f836eb72	Yes	Yes
+liboaccn/MIT-10M	Apache-2.0	No	https://huggingface.co/datasets/liboaccn/MIT-10M	image	bcba6b2651771c69f93e000486c2baa0896d32c3	No	No
+Shopify/product-catalogue	Apache-2.0	No	https://huggingface.co/datasets/Shopify/product-catalogue	image	d5c517c509f5aca99053897ef1de797d6d7e5aa5	No	No
+HuggingFaceM4/WebSight V0.2	CC-BY-4.0	No	https://huggingface.co/datasets/HuggingFaceM4/WebSight/viewer/v0.2/train?row=0	image	b11f8172f89c992b56ac702319e02c428cca4a4e	No	No
+BLIP3o/BLIP3o-Pretrain-Long-Caption	Apache-2.0	No	https://huggingface.co/datasets/BLIP3o/BLIP3o-Pretrain-Long-Caption	image	e4d07091a466d1a1e35a9b0c61caddc78d14a059	No	No
+mvp-lab/LLaVA-OneVision-1.5-Mid-Training-85M	Apache-2.0	No	https://huggingface.co/datasets/mvp-lab/LLaVA-OneVision-1.5-Mid-Training-85M	image	c5218cad785eba7d218137e8ce4997bda568a050	No	No
+CSU-JPG/TextAtlas5M	Mixed, MIT	No	https://huggingface.co/datasets/CSU-JPG/TextAtlas5M	image	f9f2a0f5000fbb078f718197acb45cfb9ceed551	No	No
+DeepGlint-AI/DanQing100M	CC-BY-4.0	No	https://huggingface.co/datasets/DeepGlint-AI/DanQing100M	image	508ac59f20e90f80b7bb3765c6741759e115c741	No	No
+Spawning/pd12m-full	CDLA-Permissive-2.0	No	https://huggingface.co/datasets/Spawning/pd12m-full	image	7bda6bfe13c6a39fd0a286adced5df1228041720	No	No
+FreedomIntelligence/TCM-Pretrain-Data-ShizhenGPT	Apache-2.0	No	https://huggingface.co/datasets/FreedomIntelligence/TCM-Pretrain-Data-ShizhenGPT	image	db4874ce4e322f47432fe322c558e516c5aad71e	No	No
+UCSC-VLAA/Recap-DataComp-1B	CC-BY-4.0	No	https://huggingface.co/datasets/UCSC-VLAA/Recap-DataComp-1B	image	457c44d98651bcfdfb3cc8695f5e60a0d2705e78	No	No
+vector-institute/open-pmc-18m	MIT	No	https://huggingface.co/datasets/vector-institute/open-pmc-18m	image	0d97c202058f2ac1b33438ec35e4b37b31ad3a41	No	No
+allenai/pixmo-cap	ODC-BY-1.0	No	https://huggingface.co/datasets/allenai/pixmo-cap	image	edce6390d9d5be6c8db0d863fbe62718c88988a4	Yes	Yes
+bytedance-research/UNO-1M	Apache-2.0	No	https://huggingface.co/datasets/bytedance-research/UNO-1M	image	f25bb61db6d6d66d82f41d1e613c0e04ba342e84	No	No
+ma-xu/fine-t2i	Apache-2.0	No	https://huggingface.co/datasets/ma-xu/fine-t2i	image	28fdd5663ee202b5cafc01d6ed08a03f14957854	No	No
+allenai/Molmo2-MultiImageQA	ODC-By	No	https://huggingface.co/datasets/allenai/Molmo2-MultiImageQA	image	f47ca3644d394b548be07a68d5a6fc0275924f08	No	No
+mint-medmax/medmax_data	Mixed, Apache-2.0	No	https://huggingface.co/datasets/mint-medmax/medmax_data	image	2a63fb4d5e57bbf30a130976825fadf95ea95ebb	No	No
+google/docci	CC-BY-4.0	No	https://huggingface.co/datasets/google/docci	image	a0a43eaf34676ffd008fb6565dd8c2ba00d09100	No	No
+OleehyO/latex-formulas-80M	Apache-2.0	No	https://huggingface.co/datasets/OleehyO/latex-formulas-80M	image	5cd783320b0092caa85720a85d86595f42df043b	No	No
+common-canvas/commoncatalog-cc-by	CC-BY-4.0, Mixed	No	https://huggingface.co/datasets/common-canvas/commoncatalog-cc-by	image	80f50fe4a1ca937f37a11be3f8eee5199d776ff3	No	No
+openmed-community/multicare-case-images	Mixed	No	https://huggingface.co/datasets/openmed-community/multicare-case-images	image	c8517124928d2fe3651ee6cb6c560fce66e02344	No	No
+OpenFace-CQUPT/FaceCaption-15M	CC-BY-4.0	No	https://huggingface.co/datasets/OpenFace-CQUPT/FaceCaption-15M	image	3ed92d90f7fc7199b47c4da17c6863b1a175f380	No	No
+Salesforce/blip3-grounding-50m	Apache-2.0	No	https://huggingface.co/datasets/Salesforce/blip3-grounding-50m	image	4d622c4f19b8a6b91ad914caf343306e363ff79b	No	No
+openmed-community/multicare-images	CC-BY-4.0	No	https://huggingface.co/datasets/openmed-community/multicare-images	image	5c954c4fbf9abdcb55053488dab6c1ef142796b5	No	No
+UCSC-VLAA/MedTrinity-25M	Mixed	No	https://huggingface.co/datasets/UCSC-VLAA/MedTrinity-25M	image	89e5c684794e5c4cc1af9e8f1a7798af7c937dbf	No	No
+MBZUAI/GeoChat_Instruct	Apache-2.0	No	https://huggingface.co/datasets/MBZUAI/GeoChat_Instruct	image	8eb13307eabc7fa9c1f8b0e61e372a327ccd68b1	No	No
+SlytherinGe/RSTeller	Apache-2.0	No	https://huggingface.co/datasets/SlytherinGe/RSTeller	image	a03b35f1bc9a3ac14ae93724d175c2611f1bba5b	No	No
+wangzhecheng/SkyScript	MIT	No	https://github.com/wangzhecheng/SkyScript	image	b16d2e76c5a0cdd644e2422a4446fb092d2dc1e4	No	No
+google/MapTrace	CC-BY-4.0	No	https://huggingface.co/datasets/google/MapTrace	image	8dd60adfde2f189768f27204c78ec44af07a67bf	No	No
+axiong/pmc_oa	Unknown	No	https://huggingface.co/datasets/axiong/pmc_oa	image	1d2296e9c022a24e82a47e524d53f0915b98c926	No	No
+alkzar90/NIH-Chest-X-ray-dataset	CC0 1.0 Universal	No	https://huggingface.co/datasets/alkzar90/NIH-Chest-X-ray-dataset	image	36778e3b0e4f4b4fad31d1728d6190f3eda5b543	No	No
+madebyollin/megalith-10m	MIT	No	https://huggingface.co/datasets/madebyollin/megalith-10m	image	1e65a79953396f6d05f60eba4cc564541ad4be8c	No	No
+m-a-p/PIN-200M	Apache-2.0	No	https://huggingface.co/datasets/m-a-p/PIN-200M	image	0518ee384f3afbbc594f68c428667b86847327e8	No	No
+cyberagent/crello	CDLA-Permissive-2.0	No	https://huggingface.co/datasets/cyberagent/crello	image	7997e2f434ee4aa73cf4cdf22c5954cb175872e1	No	No
+IGNF/FLAIR-HUB	Etalab Open License 2.0	No	https://huggingface.co/datasets/IGNF/FLAIR-HUB/tree/main	image	8275163f72f0eed69050a703925791b7c3577f10	No	No
+IGN	Etalab Open License 2.0	No	https://geoservices.ign.fr/planign	image	Not versioned	No	No
+Swisstopo (map-sat)	Open Government Data	No	https://www.geo.admin.ch/de/wms-verfuegbare-dienste-und-daten	image	Not versioned — Fix release	No	No
+artefactory/Argimi-Ardian-Finance-10k-text-image	CC-BY-4.0	No	https://huggingface.co/datasets/artefactory/Argimi-Ardian-Finance-10k-text-image	image	d019db455ff58bc14cae72422c4fc3ef0c301ea7	No	No
+Mitsua/art-museums-pd-440k	CC-BY-4.0	No	https://huggingface.co/datasets/Mitsua/art-museums-pd-440k	image	fba945da78b36262eb9272067197cc28d06cffbf	No	No
+bitmind/open-images-v7	CC-BY	No	https://huggingface.co/datasets/bitmind/open-images-v7	image	4518ecd40f8f9ef66ee4356be438f840c714e95a	No	No
+ibm-granite/ChartNet	NC	No	https://huggingface.co/datasets/ibm-granite/ChartNet	image	52832dd476c9a7a7b01c20245e952958cef1e2b2	No	No
+gh___nrc-cnrc___COVID-US	Mixed	No	https://github.com/nrc-cnrc/COVID-US	image	caf3aca8dcc17a43ba7c0088f36aba968c7d741e	No	No
+kg___dasmehdixtr___ddti-thyroid-ultrasound-images	Unknown	No	https://www.kaggle.com/datasets/dasmehdixtr/ddti-thyroid-ultrasound-images	image	Version 1	No	No
+kg___sabahesaraki___breast-ultrasound-images-dataset	Unknown	No	https://www.kaggle.com/datasets/sabahesaraki/breast-ultrasound-images-dataset	image	Version 1	No	No
+hf___google___scin	Other	No	https://huggingface.co/datasets/google/scin	image	996257142f7517fb8991a28cfba46ec4e3f530a9	No	No
+fs___SLID-E	MIT, CC-BY-4.0	No	https://figshare.com/articles/dataset/_i_SLID-E_Slit_Lamp_Image_Dataset_for_Epiphora_-_A_Benchmark_Resource_for_Automated_Tear_Overflow_Analysis_i_/26172919	image	Version 2	No	No
+fs___Open_UFI_and_clinical_IQA	CC-BY	No	https://springernature.figshare.com/articles/dataset/Open_ultrawidefield_fundus_image_dataset_with_disease_diagnosis_and_clinical_image_quality_assessment/26936446?file=49014559	image	Single release 2024-11-20	No	No
+kg___abhii1929___isic-skin-disease-image-dataset-4-classes	Apache-2.0	No	https://www.kaggle.com/datasets/abhii1929/isic-skin-disease-image-dataset-4-classes?select=Melanoma-20250628T115753Z-1-001	image	Version 1	No	No
+zn___MedMNIST	CC-BY-4.0	No	https://zenodo.org/records/10519652	image	Version 3.0	No	No
+zn___MedPix-2	CC-BY-4.0	No	https://zenodo.org/records/12624810	image	Version v1	No	No
+kg___masoudnickparvar___brain-tumor-mri-dataset	CC-BY-4.0	No	https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset	image	Version 2	No	No
+kg___orvile___annotated-ultrasound-liver-images-dataset	CC-BY-4.0	No	https://www.kaggle.com/datasets/orvile/annotated-ultrasound-liver-images-dataset	image	Version 2	No	No
+kg___sovitrath___diabetic-retinopathy-2015-data-colored-resized	CC0 1.0 Universal	No	https://www.kaggle.com/datasets/sovitrath/diabetic-retinopathy-2015-data-colored-resized	image	Version 2	No	No
+gh___dataset-ninja___ebhi-seg	CC-BY-4.0	No	https://github.com/dataset-ninja/ebhi-seg	image	7b3202bbb2ab33ba48e3fdaf645cdeaccc993c04	No	No
+zn___NCT-CRC-HE-100K	CC-BY-4.0	No	https://zenodo.org/records/1214456	image	Version v0.1	No	No
+MMammoTH	Apache-2.0	No	https://huggingface.co/datasets/MAmmoTH-VL/MAmmoTH-VL-Instruct-12M/tree/bac8f77cb8a8f9c4d0de407c6e3a589bd722562a	image	bac8f77cb8a8f9c4d0de407c6e3a589bd722562a	No	No
+HoloAssist	Unknown	No	https://holoassist.github.io/	image	Not versioned — Fix release	No	No
+Copernicus-Bench-bigearthnet	Mixed	No	The Copernicus-Bench dataset is composed of 15 subsets that have either a CC0 1.0, CC BY 4.0, MIT, or CDLA-Permissive-1.0 license, all of which are permissive.	image	a287ab1b414d2bff99557166988571c5885ed81a	No	No
+Copernicus-Bench-dfc2020	Mixed	No	https://huggingface.co/datasets/wangyi111/Copernicus-Bench/tree/a287ab1b414d2bff99557166988571c5885ed81a	image	a287ab1b414d2bff99557166988571c5885ed81a	No	No
+Copernicus-Bench-eurosat	Mixed	No	https://huggingface.co/datasets/wangyi111/Copernicus-Bench/tree/a287ab1b414d2bff99557166988571c5885ed81a	image	a287ab1b414d2bff99557166988571c5885ed81a	No	No
+OWID/articles	Unknown	No	https://ourworldindata.org/ (scraped)	image	Not versioned	No	No
+OWID/data_insights	Unknown	No	https://ourworldindata.org/ (scraped)	image	Not versioned	No	No
+OWID/grapher	Unknown	No	https://ourworldindata.org/ (scraped)	image	Not versioned	No	No
+YangQiee/HQ-50K	CC-BY-4.0	No	https://huggingface.co/datasets/YangQiee/HQ-50K/tree/1c501522f77594726b00b5943f1804c600e0230d	image	1c501522f77594726b00b5943f1804c600e0230d	No	No
+swissai___nasa	Unknown	No	https://www.nasa.gov/ (scraped)	image	Not versioned	No	No
+WAFFLE (Not yet merged)	Unknown	No	https://tau-vailab.github.io/WAFFLE/	image	Not versioned — Fix release	No	No
+swissai___smithsonian___open_access	CC0	No	https://www.si.edu/openaccess	image	Not versioned	No	No
+Dailymed SPL	Unknown	No	https://dailymed.nlm.nih.gov/dailymed/spl-resources-all-drug-labels.cfm	image	Monthly release	No	No
+allenai/pixmo-point-explanations	ODC-By	No	https://huggingface.co/datasets/allenai/pixmo-point-explanations/tree/08a566fa00747e4c1c7e8481c350763b469c209c	image	08a566fa00747e4c1c7e8481c350763b469c209c	No	No
+Visual Genome	CC-BY-4.0	No	https://huggingface.co/datasets/ranjaykrishna/visual_genome/tree/65bc9e7e7353fff750326c9523e384701934e530	image	65bc9e7e7353fff750326c9523e384701934e530	No	No
+nicola_handwriting-data	Apache 2.0 (in house generated)	No		image	Not versioned — Fix release (Internal (code defined))	No	No
+nicola_handwriting-slides	Apache 2.0 (in house generated)	No		image	Not versioned — Fix release (Internal (code defined))	No	No
+nllg/DaTikZ-V4	Apache-2.0	No	https://huggingface.co/datasets/nllg/DaTikZ-V4/tree/33734c83608211682be11001a1618856fc1979dd	image	33734c83608211682be11001a1618856fc1979dd	No	No

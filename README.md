@@ -1,12 +1,27 @@
 Apertus Data Transparency
 ---
 
-This is a repository containing versioned snapshots of key documentation from the Apertus releases. 
+This branch proposes a "static" version of `main`. Whereas `main` uses git tags to point to documents belonging to specific versions of Apertus, `static_folder_structure` keeps each version's document in a dedicated folder. 
 
-Use Git tags to conveniently browse and compare the `reports`:
+The folder structure is thus the following: 
 
-- [v1.5](/tree/v1.5/reports) - Apertus 1.5 (2607)
-- [v1.1](/tree/v1.1/reports) - Apertus 1.1 ([2606](https://huggingface.co/swiss-ai/Apertus-v1.1-4B))
-- [v1.0](/tree/v1.0/reports) - Apertus 1.0 ([2509](https://huggingface.co/swiss-ai/Apertus-70B-Instruct-2509))
+```
+reports/ # Contains editable files
+    |__ v1_0/
+         |_some_v1_report.txt
+         |_some_other_v1_report.docx
+         |_...
+    |__ v1_1/
+         |_...
+    |__ ...
+         |_...
+    |__ v2_0/
+         |_...
 
-The [v0.0](/tree/v0.0) tag contains an early version of this repository, in the form of an app by [@yjernite](https://huggingface.co/yjernite)
+# And the same goes for PDFs
+pdfs/
+    |__ v1_0/
+    |__ v1_1/
+    |__ ...
+    |__ v2_0/
+```
