@@ -1,27 +1,22 @@
-Apertus Data Transparency
----
+# Apertus Data Transparency
 
-This branch proposes a "static" version of `main`. Whereas `main` uses git tags to point to documents belonging to specific versions of Apertus, `static_folder_structure` keeps each version's document in a dedicated folder. 
+This is a repository containing versioned snapshots of key documentation from the Apertus releases.
 
-The folder structure is thus the following: 
+### Folder structure
 
 ```
 reports/ # Contains editable files
     |__ v1_0/
-         |_some_v1_report.txt
-         |_some_other_v1_report.docx
-         |_...
-    |__ v1_1/
+         |_some_v1_0_report.txt
+         |_some_other_v1_0_report.docx
          |_...
     |__ ...
          |_...
     |__ v2_0/
          |_...
 
-# And the same goes for PDFs
-pdfs/
+pdfs/  # Same structure for pdfs
     |__ v1_0/
-    |__ v1_1/
     |__ ...
     |__ v2_0/
 ```
