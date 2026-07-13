@@ -1,7 +1,7 @@
 ---
 license: apache-2.0
 base_model:
-- swiss-ai/Apertus-v1.5-8B-2607
+- swiss-ai/Apertus-v1.5-70B-2607
 pipeline_tag: text-generation
 library_name: transformers
 tags:
@@ -14,7 +14,7 @@ tags:
 
 # Apertus 1.5
 
-(TODO: update evaluation chart)
+Pre-Release Model Weights - **NOT FOR DISTRIBUTION**
 
 ##  Table of Contents
 
@@ -62,63 +62,15 @@ Detailed instructions for advanced usage can be found in the [User Guides](https
 
 ### Developers
 
-For data science users, the modeling code for Apertus is available from [Transformers](https://huggingface.co/docs/transformers/index) `v4.56.0` and later, and we recommend you upgrade to the latest stable version. We have tested up to `v5.12.1` in this release. A code example of using the model in this way is listed below.
-
-Run a command like this first to install the library using a package manager:
-
-```bash
-pip install -U transformers
-```
-
-With this sample Python code, you can load and prompt Apertus in the library from Hugging Face:
-
-```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
-
-model_name = "swiss-ai/Apertus-8B-Instruct-2509"
-device = "cuda"  # for GPU usage or "cpu" for CPU usage
-
-# load the tokenizer and the model
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = AutoModelForCausalLM.from_pretrained(
-    model_name,
-).to(device)
-
-# prepare the model input
-prompt = "Give me a brief explanation of gravity in simple terms."
-messages_think = [
-    {"role": "user", "content": prompt}
-]
-
-text = tokenizer.apply_chat_template(
-    messages_think,
-    tokenize=False,
-    add_generation_prompt=True,
-)
-model_inputs = tokenizer([text], return_tensors="pt", add_special_tokens=False).to(model.device)
-
-# Generate the output
-generated_ids = model.generate(**model_inputs, max_new_tokens=32768)
-
-# Get and decode the output
-output_ids = generated_ids[0][len(model_inputs.input_ids[0]) :]
-print(tokenizer.decode(output_ids, skip_special_tokens=True))
-```
-
->[!TIP]
-> We recommend setting `temperature=0.8` and `top_p=0.9` in the sampling parameters.
+For data science users, the modeling code for Apertus is available from [Transformers](https://huggingface.co/docs/transformers/index) `v4.56.0` and later, and we recommend you upgrade to the latest stable version. We have tested up to `v5.12.1` in this release. A code example of using the model in this way is listed in the [Tranformers guide](https://apertus-ai.org/docs/guides/) in our documentation.
 
 ### Long context processing
 
 Apertus 1.5 by default supports a context length up to 262'144 tokens, a four-fold increase from our initial release.
 
-(#TODO mention something about performance tradeoffs)
-
 ### Agentic Usage
 
 Apertus supports tool use with newer versions of the internal parser, such as the version shipped with [vLLM 0.22.0](https://github.com/vllm-project/vllm/releases/tag/v0.22.0) and above. 
-
-(#TODO recommendations on tool use and harnesses)
 
 ## Deployment
 
@@ -133,9 +85,9 @@ Please use 3rd party builds at your own risk, and contact us for a quick validat
 
 ## Evaluation
 
-Benchmark evaluations, for pretraining and posttraining phases, multilingual evaluations in around hundred languages, and long context evaluations are provided in Section 5 of the [Apertus Tech Report](https://arxiv.org/abs/2509.14233)
+Benchmark evaluations, for pretraining and posttraining phases, multilingual evaluations in around hundred languages, and long context evaluations from the original Apertus release are provided in Section 5 of the [Apertus Tech Report](https://arxiv.org/abs/2509.14233).
 
-(#TODO update with link to benchmarks page)
+New results will be updated here soon.
 
 ## Training
 
@@ -149,7 +101,7 @@ Benchmark evaluations, for pretraining and posttraining phases, multilingual eva
 
 - **GPUs:** 4096 GH200
 - **Training Framework:** [Megatron-LM](https://github.com/swiss-ai/Megatron-LM)
-- ... (#TODO what else?)
+- ...
 
 ### Open resources
 
@@ -157,13 +109,11 @@ All elements used in the training process are made openly available
 - **Training data reconstruction scripts:** [github.com/swiss-ai/pretrain-data](https://github.com/swiss-ai/pretrain-data)
 - The training intermediate checkpoints are available on the different branches of this same repository
 
-(#TODO posttraining data etc.)
-
 ## Limitations
 
 Apertus can produce text on a variety of topics, but the generated content may not always be factually accurate, logically consistent, or free from biases present in the training data. These models should be used as assistive tools rather than definitive sources of information. Users should always verify important information and critically evaluate any generated content.
 
-(#TODO link to Swiss AI Charter?)
+See the [Swiss AI Charter](https://apertus-ai.org/pages/charter/) for the behavior constitution of the model.
 
 ## Legal Aspects
 
