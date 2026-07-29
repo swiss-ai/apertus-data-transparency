@@ -1,0 +1,201 @@
+name: ➕ New Dataset
+description: Submit a new dataset to the Apertus catalogue
+title: '[dataset] Your dataset''s name...'
+labels:
+  - dataset
+body:
+  - type: input
+    id: name
+    attributes:
+      label: name
+      description: |
+        Official or primary name of the dataset (e.g. "MegaMath", "FineWeb-Edu").
+        Generally, use the `[owner/dataset_name]` format, where owner is the individual or organization responsible for the dataset.
+        - ➡️ Hugging Face / GitHub: username or organization (e.g. "LLM360")
+        - ➡️ Other platforms: platform name (e.g. "zenodo")
+        - ➡️ Internally generated: "swiss-ai"
+      placeholder: LLM360/MegaMath
+    validations:
+      required: true
+  - type: checkboxes
+    id: modalities
+    attributes:
+      label: modalities
+      description: Data modalities present in the dataset.
+      options:
+        - label: text
+        - label: audio
+        - label: image
+  - type: textarea
+    id: tags
+    attributes:
+      label: tags
+      description: |
+        Tags describing the dataset's purpose, domain, and intended ML use case. Please use lowercase only. Minimally indicate `pretraining` or `posttraining`.
+        One per line, no quotes.
+      placeholder: |
+        pretraining
+        math
+        reasoning
+    validations:
+      required: true
+  - type: checkboxes
+    id: used_in
+    attributes:
+      label: used_in
+      description: Versions of Apertus in which the dataset is used.
+      options:
+        - label: v1
+        - label: v1.5
+        - label: v2
+  - type: input
+    id: url
+    attributes:
+      label: url
+      description: |
+        Clean, canonical URL to the original dataset (without query parameters, fragments, or file paths).
+        Leave empty (on GitHub issue) for internal/generated datasets with no public URL.
+        Examples
+        - ✅ https://huggingface.co/datasets/LLM360/MegaMath
+        - ✅ https://zenodo.org/records/1234567
+        - ❌ https://huggingface.co/datasets/LLM360/MegaMath?ref=main
+        - ❌ https://huggingface.co/datasets/LLM360/MegaMath/blob/main/data.jsonl
+        - ✅ `null`
+      placeholder: https://huggingface.co/datasets/LLM360/MegaMath
+  - type: textarea
+    id: licenses
+    attributes:
+      label: licenses
+      description: |
+        License(s) of the dataset. Must be written in lowercase only. Use standard SPDX identifiers when possible.
+        One per line, no quotes.
+        Examples:
+        - ✅ cc-by-nc 4.0
+        - ❌ CC-BY-NC 4.0
+      placeholder: |
+        mit
+        apache-2.0
+    validations:
+      required: true
+  - type: dropdown
+    id: pii_removal
+    attributes:
+      label: pii_removal
+      description: Whether the dataset was preprocessed to remove personally identifiable information (PII).
+      options:
+        - Yes
+        - No
+        - Not applicable
+    validations:
+      required: true
+  - type: dropdown
+    id: robots_filtering
+    attributes:
+      label: robots_filtering
+      description: Whether the dataset was preprocessed to remove content that is disallowed by the source website's `robots.txt` file.
+      options:
+        - Yes
+        - No
+        - Not applicable
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: version
+      description: |
+        Version identifier of the dataset.
+        - ➡️ Version-controlled sources (HF, GitHub): full (40 hex) commit hash
+        - ➡️ Explicit releases: version string (replace spaces with underscores)
+        - ➡️ Leave empty (on GitHub issue) or `null` (in direct YAML editing) if no version exists.
+        
+        
+        Examples:
+        - ✅ 5bc987ce1580cd8afe385e003598aa8c29cd63cc
+        - ✅ v1.01
+        - ✅ version_2
+        - ✅ `null`
+      placeholder: 5bc987ce1580cd8afe385e003598aa8c29cd63cc
+    validations:
+      required: true
+  - type: input
+    id: raw_dir
+    attributes:
+      label: raw_dir
+      description: Location of the raw dataset files. Can be specified before creation.
+      placeholder: /capstor/store/cscs/swissai/infra01/datasets/HuggingFaceTB/finemath/
+    validations:
+      required: true
+  - type: input
+    id: processed_dir
+    attributes:
+      label: processed_dir
+      description: Location of the processed dataset files. Can be specified before creation.
+      placeholder: /capstor/store/cscs/swissai/infra01/datasets/HuggingFaceTB/finemath/
+    validations:
+      required: true
+  - type: input
+    id: tokenized_dir
+    attributes:
+      label: tokenized_dir
+      description: Location of the tokenized dataset files. Can be specified before creation.
+      placeholder: /capstor/store/cscs/swissai/infra01/datasets/HuggingFaceTB/finemath/
+    validations:
+      required: true
+  - type: input
+    id: processing_script
+    attributes:
+      label: processing_script
+      description: |
+        Immutable github URL to the processing script, with the commit hash included. 
+        Format should be `https://github.com/owner/repo/blob/[commit_hash]/path/to/script.py`. Click `History` > `View code at this
+        point` to copy the URL.
+      placeholder: https://github.com/swiss-ai/data-pipeline-pretrain/blob/eb116354a5d131d80597447b49dc3ad1a28f96d5/pipelines/voilaj/swiss-caselaw/main.py
+    validations:
+      required: true
+  - type: input
+    id: tokenization_script
+    attributes:
+      label: tokenization_script
+      description: |
+        Immutable github URL to the tokenization script, with the commit hash included. 
+        Format should be `https://github.com/owner/repo/blob/[commit_hash]/path/to/script.py`. Click `History` > `View code at this
+        point` to copy the URL.
+      placeholder: https://github.com/swiss-ai/data-pipeline-pretrain/blob/eb116354a5d131d80597447b49dc3ad1a28f96d5/pipelines/voilaj/swiss-caselaw/main.py
+    validations:
+      required: true
+  - type: input
+    id: dumps_preparation_script
+    attributes:
+      label: dumps_preparation_script
+      description: |
+        Immutable github URL to the dumps preparation script, with the commit hash included. 
+        Format should be `https://github.com/owner/repo/blob/[commit_hash]/path/to/script.py`. Click `History` > `View code at this
+        point` to copy the URL. Leave the URL empty if not applicable.
+      placeholder: https://github.com/swiss-ai/data-pipeline-pretrain/blob/eb116354a5d131d80597447b49dc3ad1a28f96d5/pipelines/voilaj/swiss-caselaw/main.py
+  - type: input
+    id: chunking_script
+    attributes:
+      label: chunking_script
+      description: |
+        Immutable github URL to the chunking script (Dani's bit-wise chunking), with the commit hash included. 
+        Format should be `https://github.com/owner/repo/blob/[commit_hash]/path/to/script.py`. Click `History` > `View code at this
+        point` to copy the URL. Leave the URL empty if not applicable.
+      placeholder: https://github.com/swiss-ai/data-pipeline-pretrain/blob/eb116354a5d131d80597447b49dc3ad1a28f96d5/pipelines/voilaj/swiss-caselaw/main.py
+  - type: textarea
+    id: notes
+    attributes:
+      label: notes
+      description: |
+        Free-text notes or important remarks about the dataset.
+      placeholder: Any additional information, limitations, usage tips...
+  - type: textarea
+    id: pocs
+    attributes:
+      label: pocs
+      description: |
+        Points of contact for this dataset.
+        One name per line, no quotes.
+      placeholder: |
+        Jane Doe
+        John Smith

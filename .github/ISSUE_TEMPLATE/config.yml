@@ -1,0 +1,12 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💡 Feature Request / Idea
+    url: https://github.com/sven-nm/apertus_data/issues/new?template=feature_request.yml
+    about: Suggest a new feature or improvement
+
+# This makes your new dataset template appear nicely
+issue_templates:
+  - name: ➕ New Dataset
+    description: Submit a new dataset to the catalogue
+    about: "Use this template to add a new dataset"
+    filename: new_dataset.yml
