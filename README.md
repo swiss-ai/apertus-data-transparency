@@ -43,6 +43,7 @@ format and the automation keeps the file consistent.
    (use the [**New Dataset** issue template](.github/ISSUE_TEMPLATE/new_dataset.yml) as a
    reference for what each column expects and how to format it).
 3. Open a pull request against `main`.
+4. Please **delete your branch** once done.
 
 This route is best for bulk additions or edits to existing rows.
 
