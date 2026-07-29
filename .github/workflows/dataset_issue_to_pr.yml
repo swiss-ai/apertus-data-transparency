@@ -1,0 +1,93 @@
+name: Dataset issue → PR
+
+# When a "New Dataset" issue is opened (or edited to fix mistakes), validate its fields and
+# open a pull request that appends the corresponding row to the catalogue TSV.
+on:
+  issues:
+    types: [opened, edited]
+
+# Least-privilege scopes needed to push a branch, comment, and open the PR.
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  add-dataset-row:
+    # Only run for issues created from the dataset template (which applies the `dataset` label).
+    if: contains(github.event.issue.labels.*.name, 'dataset')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Parse issue and append TSV row
+        id: parse
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: python .github/scripts/issue_to_tsv.py
+
+      - name: Comment on invalid submission
+        if: steps.parse.outputs.ok != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ERRORS: ${{ steps.parse.outputs.errors }}
+        run: |
+          gh issue comment "${{ github.event.issue.number }}" --body "$(cat <<EOF
+          🤖 Thanks for the submission! I could not add this dataset automatically because of the following issue(s):
+
+          $ERRORS
+
+          Please **edit the issue** to fix them — I will re-run automatically and open a pull request once everything checks out.
+          EOF
+          )"
+
+      - name: Create pull request
+        if: steps.parse.outputs.ok == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          DATASET_NAME: ${{ steps.parse.outputs.name }}
+        run: |
+          set -euo pipefail
+          BRANCH="dataset/issue-${ISSUE_NUMBER}"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git checkout -b "$BRANCH"
+          git add "Apertus dataset repository.tsv"
+          git commit -m "Add dataset '${DATASET_NAME}' from issue #${ISSUE_NUMBER}"
+          # Force-push so an edited issue refreshes the existing branch/PR.
+          git push --force origin "$BRANCH"
+
+          BODY="Automatically generated from #${ISSUE_NUMBER}.
+
+          This PR appends **${DATASET_NAME}** to \`Apertus dataset repository.tsv\`.
+          Please review the row before merging.
+
+          Closes #${ISSUE_NUMBER}"
+
+          # Create the PR only if one does not already exist for this branch.
+          if [ -z "$(gh pr list --head "$BRANCH" --state open --json number --jq '.[].number')" ]; then
+            gh pr create --base main --head "$BRANCH" \
+              --title "Add dataset '${DATASET_NAME}' (#${ISSUE_NUMBER})" \
+              --body "$BODY"
+          fi
+
+      - name: Link pull request on the issue
+        if: steps.parse.outputs.ok == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          BRANCH="dataset/issue-${ISSUE_NUMBER}"
+          PR_URL="$(gh pr list --head "$BRANCH" --state open --json url --jq '.[0].url')"
+          if [ -n "$PR_URL" ]; then
+            gh issue comment "${ISSUE_NUMBER}" --body "🤖 A pull request has been opened for this dataset: ${PR_URL}"
+          fi
