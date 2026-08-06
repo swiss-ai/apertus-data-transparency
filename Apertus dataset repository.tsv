@@ -39,7 +39,6 @@ LLM360/TxT360	text	pre-training		https://huggingface.co/datasets/LLM360/TxT360	o
 HuggingFaceFW/finephrase	text	pre-training		https://huggingface.co/datasets/HuggingFaceFW/finephrase	odc-by			78cf4a5ed0099214979c094c963e699c19163838								Weak ablations	
 Nemotron-Pretraining-Specialized-v1_2	text	pre-training	v2	https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1.2	CC-BY-4.0			807afc1fa65c441d46ebc7d9b95295a35499a527									
 Nemotron-Pretraining-Specialized-v1	text	pre-training	v2	https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-Specialized-v1	CC-BY-4.0			9ed3718b5f2ae29074c5e34e64115432b7c4320f									
-open-papers	text	pre-training	v2														
 HPLT_4_0	text	pre-training	v2	https://hplt-project.org/datasets/v4.0	CC0-1.0	Yes	Yes	v4.0									
 HuggingFaceFW/finetranslations-edu	text	pre-training	v2	https://huggingface.co/datasets/HuggingFaceFW/finetranslations-edu	odc-by	Yes	Yes	93f3d2c7b74d7a0a98802f298c63f3d63282a7df									
 MaLA-LM/FineOPUS-Original	text	pre-training	v2	https://huggingface.co/datasets/MaLA-LM/FineOPUS-Original	odc-by	Yes	Yes	f696539b409f1247023ff14e84800266cec89f6e									
