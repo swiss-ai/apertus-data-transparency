@@ -83,8 +83,8 @@ body:
       label: pii_removal
       description: Whether the dataset was preprocessed to remove personally identifiable information (PII).
       options:
-        - Yes
-        - No
+        - "Yes"
+        - "No"
         - Not applicable
     validations:
       required: true
@@ -94,8 +94,8 @@ body:
       label: robots_filtering
       description: Whether the dataset was preprocessed to remove content that is disallowed by the source website's `robots.txt` file.
       options:
-        - Yes
-        - No
+        - "Yes"
+        - "No"
         - Not applicable
     validations:
       required: true
