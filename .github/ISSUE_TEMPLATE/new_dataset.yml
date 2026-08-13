@@ -85,18 +85,25 @@ body:
       options:
         - "Yes"
         - "No"
-        - Not applicable
+        - "N/A"
     validations:
       required: true
   - type: dropdown
     id: robots_filtering
     attributes:
       label: robots_filtering
-      description: Whether the dataset was preprocessed to remove content that is disallowed by the source website's `robots.txt` file.
+      description: |
+        Whether the dataset was preprocessed to remove content that is disallowed by the source website's `robots.txt` file.
+        - ➡️ `Yes` / `No`: filtering was / was not applied
+        - ➡️ `Yes (V2)`: filtering applied following the V2 robots policy
+        - ➡️ `At crawl time`: disallowed content was never collected in the first place
+        - ➡️ `N/A`: the dataset has no web-crawled source, so `robots.txt` does not apply
       options:
         - "Yes"
         - "No"
-        - Not applicable
+        - "Yes (V2)"
+        - "At crawl time"
+        - "N/A"
     validations:
       required: true
   - type: input
