@@ -1,1 +1,11 @@
 blank_issues_enabled: false
+contact_links:
+  - name: ➕ New Dataset (private repository)
+    url: https://github.com/swiss-ai/apertus-data-transparency-private/issues/new?template=new_dataset.yml
+    about: >-
+      Dataset submissions and the compliance discussion around them now live in the private
+      repository. Open your "New Dataset" issue there (access is granted to the data and legal
+      teams).
+  - name: 💬 Dataset compliance discussion (private repository)
+    url: https://github.com/swiss-ai/apertus-data-transparency-private/issues
+    about: Licensing, PII and robots-filtering questions about a dataset are discussed privately.
