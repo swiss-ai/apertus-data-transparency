@@ -2,51 +2,36 @@
 
 This is a repository containing versioned snapshots of key documentation from the Apertus releases.
 
+## ⚠️ New datasets are declared in the private repository
+
+Declaring a dataset means discussing its licensing, PII handling and robots filtering — a
+discussion that belongs in a private setting rather than in public issues and pull requests. All of
+that has therefore moved to
+[`swiss-ai/apertus-data-transparency-private`](https://github.com/swiss-ai/apertus-data-transparency-private).
+
+- **To add a dataset**, open a
+  [**➕ New Dataset** issue](https://github.com/swiss-ai/apertus-data-transparency-private/issues/new?template=new_dataset.yml)
+  in the private repository, or edit the TSV there directly via a pull request. See its README for
+  the full instructions.
+- **To discuss the compliance of a dataset**, open an issue in the private repository as well.
+- Access to the private repository is granted to the data and legal teams — ping Sven if you need
+  it.
+
+Issues and pull requests opened here for new datasets will be redirected there.
+
 ## The central dataset repository
 
 `Apertus dataset repository.tsv` is the single source of truth for the datasets that go into the
 main Apertus training run. It lists every dataset we use, together with its modalities, licenses,
-versions, storage paths and processing scripts.
+versions, storage paths and processing scripts. The copy in this repository is the **published
+snapshot** of the catalogue; the working copy lives in the private repository and is mirrored here
+automatically whenever it changes, so do not edit the TSV in this repository by hand.
 
-The repository defines the workflow for contributing data to a training run:
+The workflow for contributing data to a training run is unchanged:
 
-1. **Declare** the datasets you want to use by adding them to the catalogue (see below).
+1. **Declare** the datasets you want to use by adding them to the catalogue — in the
+   [private repository](https://github.com/swiss-ai/apertus-data-transparency-private).
 2. **Validation** — the data and legal teams review each entry to confirm the dataset's
    licensing, PII handling and robots filtering are acceptable.
 3. **Use only validated datasets** — once an entry has been reviewed and merged, it is cleared for
    use in the training run. Datasets that are not in the catalogue must not be used.
-
-## Adding a dataset
-
-There are two ways to add a dataset to the catalogue. Both end with a pull request that the data
-and legal teams review before it is merged.
-
-### Option A — Open a "New Dataset" issue (recommended)
-
-1. Go to the repository's **Issues** tab and open a new issue using the
-   [**➕ New Dataset**](../../issues/new?template=new_dataset.yml) template.
-2. Fill in the form fields (name, modalities, licenses, version, storage paths, processing
-   scripts, etc.). Follow the format hints in each field's description.
-3. On submit, a GitHub Action validates the required fields and, if everything checks out,
-   automatically opens a pull request that appends your dataset as a new row to the TSV. It then
-   links the PR back on the issue.
-4. If validation fails, the bot comments on the issue listing what needs fixing. **Edit the
-   issue** to correct it — the action re-runs automatically and refreshes the pull request.
-
-This route is best if you are not comfortable editing a TSV by hand: the form guides the expected
-format and the automation keeps the file consistent.
-
-### Option B — Edit the TSV directly via a pull request
-
-1. Create a branch.
-2. Add one row per dataset to `Apertus dataset repository.tsv`, filling in every column
-   (use the [**New Dataset** issue template](.github/ISSUE_TEMPLATE/new_dataset.yml) as a
-   reference for what each column expects and how to format it).
-3. Open a pull request against `main`.
-4. Pull requests can be validated by the admins only, don't hesitate to ping Sven. 
-5. Please **delete your branch** once done.
-
-This route is best for bulk additions or edits to existing rows.
-
-In both cases the pull request is only merged once the data and legal teams have validated the
-entry.
